@@ -6,21 +6,18 @@
   </head>
   <body>
 
-    <h1>{{ criteria.criteria_text }}</h1>
+    <h1 >{{ criteria.criteria_text }}</h1>
 <ul>
 {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }}</li>
 {% endfor %}
 </ul>
 
-{% else %}
-    <p>No scores are available.</p>
-{% endif %}
 
 <form action="{% url 'entries:score' criteria.id %}" method="post">
     {% csrf_token %}
     <fieldset>
-        <legend><h1>{{ criteria.criteria_text }}</h1></legend>
+        <legend><h1 class="my-5">{{ criteria.criteria_text }}</h1></legend>
         {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
         {% for choice in criteria.choice_set.all %}
             <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
