@@ -3,7 +3,8 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Artwork():
+
+class Artwork:
     title = models.CharField(max_length=200)
     artist_text = models.CharField(max_length=200)
     panelist_text = models.CharField(max_length=200)
@@ -15,12 +16,12 @@ class Artwork():
     # int
     depth = models.IntegerField(max_length=30)
     media = models.CharField(max_length=200)
-    year_completed = models.DateTimeField('')
+    year_completed = models.DateTimeField("")
 
 
-class Artist():
+class Artist:
     artist_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField("date published")
     full_name = models.CharField(max_length=200)
     pronouns = models.CharField(max_length=30)
     street_address = models.CharField(max_length=200)
@@ -37,9 +38,9 @@ class Artist():
     created_date = models.DateTimeField(default=timezone.now)
 
 
-class Panelist():
+class Panelist:
     panelist_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField("date published")
     full_name = models.CharField(max_length=200)
     pronouns = models.CharField(max_length=30)
     street_address = models.CharField(max_length=200)
@@ -60,13 +61,16 @@ class Criteria(models.Model):
     criteria_text = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     text = models.TextField(max_length=200, null=True)
+
     def __str__(self):
         return self.criteria_text
+
 
 class Choice(models.Model):
     criteria = models.CharField(max_length=200, null=True)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
+
     def __str__(self):
         return self.choice_text

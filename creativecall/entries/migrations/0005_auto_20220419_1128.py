@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('entries', '0004_auto_20220419_1022'),
+        ("entries", "0004_auto_20220419_1022"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='choice',
-            name='criteria',
+            model_name="choice",
+            name="criteria",
             field=models.CharField(max_length=200, null=True),
         ),
         migrations.AddField(
-            model_name='criteria',
-            name='text',
+            model_name="criteria",
+            name="text",
             field=models.TextField(max_length=200, null=True),
         ),
     ]

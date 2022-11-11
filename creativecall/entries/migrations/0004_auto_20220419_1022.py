@@ -7,28 +7,39 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('entries', '0003_choice_question'),
+        ("entries", "0003_choice_question"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Criteria',
+            name="Criteria",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('criteria_text', models.CharField(max_length=200)),
-                ('created_date', models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("criteria_text", models.CharField(max_length=200)),
+                (
+                    "created_date",
+                    models.DateTimeField(default=django.utils.timezone.now),
+                ),
             ],
         ),
         migrations.RemoveField(
-            model_name='choice',
-            name='question',
+            model_name="choice",
+            name="question",
         ),
         migrations.AddField(
-            model_name='choice',
-            name='created_date',
+            model_name="choice",
+            name="created_date",
             field=models.DateTimeField(default=django.utils.timezone.now),
         ),
         migrations.DeleteModel(
-            name='Question',
+            name="Question",
         ),
     ]

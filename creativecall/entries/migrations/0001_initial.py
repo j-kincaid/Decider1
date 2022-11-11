@@ -7,24 +7,39 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Choice',
+            name="Choice",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('choice_text', models.CharField(max_length=200)),
-                ('votes', models.IntegerField(default=0)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("choice_text", models.CharField(max_length=200)),
+                ("votes", models.IntegerField(default=0)),
             ],
         ),
         migrations.CreateModel(
-            name='Criteria',
+            name="Criteria",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('criteria_name', models.CharField(max_length=30)),
-                ('parent_id', models.IntegerField(default=0)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("criteria_name", models.CharField(max_length=30)),
+                ("parent_id", models.IntegerField(default=0)),
             ],
         ),
     ]
