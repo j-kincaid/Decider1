@@ -39,19 +39,8 @@ An app providing a rubric to assist nonprofit arts organizations in selecting ar
 
 ![Landing Page](https://user-images.githubusercontent.com/11914762/175826997-f0ce36d3-47bc-4d98-baf0-1ff7db07396e.png)
 
-### Profile for Individual Panelist
 
-![Artist or Artwork Scoring Results ](https://user-images.githubusercontent.com/11914762/175827026-1fefd872-c849-48fd-bd60-90a41212704f.png)
-
-### Scoring for One Artwork
-
-![Voting results](https://user-images.githubusercontent.com/11914762/175827035-dc1def14-5bc0-44ef-83a3-806b4be07484.png)
-
-### Final Report
-
-![Final Report](https://user-images.githubusercontent.com/11914762/175827043-81ffa61d-8b85-4a6c-bd5d-c91a90fa23bc.png)
-
-### Designs created with Canva.
+### Image by Canva.
 
 
 
