@@ -6,14 +6,11 @@ from .models import Artwork, Tag
 from .forms import ArtworkForm, ReviewForm
 
 
-# This is the path  http://127.0.0.1:8000/artworks/
 def artworks(request):
     artworks = Artwork.objects.all()
     context = {"artworks": artworks}
     return render(request, "artworks/artworks.html", context)
 
-
-# http://127.0.0.1:8000/artwork/1/
 def artwork(request, pk):
     artworkObj = Artwork.objects.get(id=pk)
     tags = artworkObj.tags.all()
