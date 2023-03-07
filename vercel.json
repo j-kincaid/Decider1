@@ -1,8 +1,5 @@
 {
   
-    "framework": "null",
-  
-
   "functions": {
     "api/users/**/*.js": {
       "maxDuration": 10
@@ -16,5 +13,18 @@
       "memory": 1024,
       "maxDuration": 10
     }
-  }
+  },
+
+  "builds": [
+    {
+      "src": "artfave/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "artfave/wsgi.py"
+    }
+  ]
 }
