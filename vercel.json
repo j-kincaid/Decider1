@@ -10,5 +10,11 @@
       "src": "/(.*)",
       "dest": "artfave/wsgi.py"
     }
-  ]
+  ],
+  "functions": {
+    "artfave/wsgi.py": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
 }
