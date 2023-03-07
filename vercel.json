@@ -27,5 +27,12 @@
           "src": "/(.*)",
           "dest": "artfave/wsgi.py"
       }
-  ]
+  ],
+ 
+    "functions": {
+      "artfave/**/*.py": {
+        "excludeFiles": "**/*.jpg"
+      }
+    }
+  
 }
