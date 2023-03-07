@@ -1,15 +1,7 @@
 {
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "artfave/wsgi.py"
-        }
-    ],
-    
-      "functions": {
-        "api/users/**/*.js": {
-          "maxDuration": 10
-        }
-      }
+  "functions": {
+    "api/users/**/*.js": {
+      "maxDuration": 10
     }
-    
+  }
+}
