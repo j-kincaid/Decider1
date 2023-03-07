@@ -26,6 +26,10 @@
       {
           "src": "/static/(.*)",
           "dest": "/static/$1"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "artfave/wsgi.py"
       }
  
   ]
