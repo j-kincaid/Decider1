@@ -1,13 +1,20 @@
 {
-    "builds": [{
-        "src": "artfave/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "artfave/wsgi.py"
         }
-    ]
-}
+    ],
+    
+
+    "functions": {
+      "api/test.js": {
+        "memory": 1024,
+        "maxDuration": 10
+      },
+      "api/*.js": {
+        "memory": 1024,
+        "maxDuration": 10
+      }
+    }
+  }
