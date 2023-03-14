@@ -12,11 +12,12 @@ Plug is in its 11th year now. The Crit Night app is designed to track responses 
 
 ### FEATURES:
 
-- Moderator and Artist account categories
+- Moderator and Artist accounts
 - Logins with validation
 - Thumbnail images of the artworks on display
 - Artists can create, read, update, and delete their own images.
-- Anyone can answer the questions:
+- Anonymous scoring with star rating system
+- Anyone can comment in answer to the questions:
 - -- What works?
 - -- What needs work?
 - -- What might work?
