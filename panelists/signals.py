@@ -23,13 +23,13 @@ def createProfile(sender, instance, created, **kwargs):
         )
 
 
-        send_mail(
-            'Welcome to CritNight!',
-            'Thank you for signing up.',
-            settings.EMAIL_HOST_USER, 
-            [profile.email],
-            fail_silently=False,
-        )
+        # send_mail(
+        #     'Welcome to CritNight!',
+        #     'Thank you for signing up.',
+        #     settings.EMAIL_HOST_USER, 
+        #     [profile.email],
+        #     fail_silently=False,
+        # )
 
 
 def updateUser(sender, instance, created, **kwargs):
